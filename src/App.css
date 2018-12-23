@@ -7,6 +7,26 @@
   height: 40vmin;
 }
 
+.App form {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 80%;
+    background-color: #eee;
+    margin: 0 auto;
+}
+
+.App form label {
+    grid-column: 1;
+    text-align: right;
+}
+
+.App form textarea {
+    grid-column: 2;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

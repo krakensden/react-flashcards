@@ -23,11 +23,10 @@ function Cards(props) {
 function Entry(props) {
     return (
         <form>
-        hello world
-        <label for="title">Title:</label><input name="title"></input>
-        <textarea name="question"></textarea>
-        <textarea name="answer"></textarea>
-        <input onClick={props.OnClick}></input>
+        <label name="title">Title:</label> <textarea class="title"></textarea>
+        <label name="question">Question:</label> <textarea class="question"></textarea>
+        <label name="answer">Answer:</label> <textarea class="answer"></textarea>
+        <input type="submit" onClick={props.OnClick}/>
         </form>
     );
 }
@@ -40,7 +39,7 @@ class App extends Component {
             cards = localStorage["flashcards"].slice();
         }
         this.state = {
-            mode: null,
+            mode: 'review',
             cards: cards,
         };
         this.switchMode();
